@@ -1,0 +1,17 @@
+<div class="article-item">
+  <img
+    class="article-item__img"
+    [src]="article.image_url"
+    alt="{{ article.title }}"
+  />
+  <div class="container">
+    <div class="article-item__body body" *ngIf="article">
+      <h1 class="body__title">{{ article.title }}</h1>
+      <p class="body__value">{{ article.summary }}</p>
+    </div>
+    <a [routerLink]="['/articles']" class="btn">
+      <img src="../../../assets/images/icons/arrowR.png" alt="" />
+      Back to homepage
+    </a>
+  </div>
+</div>

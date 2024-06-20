@@ -1,0 +1,143 @@
+.search {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+
+  &__input--container {
+    position: relative;
+  }
+
+  &__body {
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  &__value {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.5px;
+  }
+}
+
+.input {
+  &__body {
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  &__field {
+    position: absolute;
+    height: 50px;
+    border: 1px solid #eaeaea;
+    box-shadow: 0px 8px 24px 0px #0000000d;
+    width: 50%;
+    border-radius: 5px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #575757;
+    padding-left: 40px;
+    @media (max-width: 767px) {
+      width: auto;
+    }
+  }
+  &__field::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #575757;
+  }
+
+  &__btn {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+  }
+}
+
+/////////////////////////////
+.news {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+
+  &__body {
+    padding: 20px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.article {
+  cursor: pointer;
+  position: relative;
+  width: 30%;
+  border: 1px solid #eaeaea;
+  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.05);
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+
+  height: 530px;
+  img {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 29.26px;
+    color: #363636;
+    padding-bottom: 20px;
+  }
+
+  .data-body {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    img {
+      width: 15px;
+      height: auto;
+    }
+    .data {
+      color: #363636;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+    }
+  }
+  .value {
+    position: absolute;
+    top: 70%;
+    width: 85%;
+    color: #363636;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .btn {
+    position: absolute;
+    top: 90%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    img {
+      width: 14px;
+      height: auto;
+    }
+  }
+  @media (max-width: 998px) {
+    width: 45%;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}

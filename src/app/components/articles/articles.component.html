@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="search search__body">
+    <p class="search__value">Filter by keywords</p>
+    <div class="input input__body">
+      <input
+        class="input__field"
+        (input)="onSearchInput()"
+        [(ngModel)]="searchTerm"
+        placeholder="Enter keywords"
+      />
+      <img
+        class="input__btn"
+        src="../../../assets/images/icons/Vector.png"
+        alt=""
+      />
+    </div>
+    <p class="search__value">Results found: {{ filteredArticles.length }}</p>
+  </div>
+
+  <div class="news">
+    <div
+      [routerLink]="['/article', article.id]"
+      *ngFor="let article of filteredArticles"
+      class="article"
+    >
+      <img src="{{ article.image_url }}" alt="" />
+      <div class="news__body">
+        <div class="data-body">
+          <img src="../../../assets/images/icons/calendar.png" alt="" />
+          <p class="data">
+            {{ article.published_at | date : "MMMM d, yyyy" }}
+          </p>
+        </div>
+        <h2 class="title">
+          <a [innerHTML]="highlightKeywords(article.title)"></a>
+        </h2>
+        <p
+          class="value"
+          [innerHTML]="highlightKeywords(article.summary | summary : 100)"
+        ></p>
+        <a class="btn">
+          Read more
+          <img src="../../../assets/images/icons/arrowR.png" alt="" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
