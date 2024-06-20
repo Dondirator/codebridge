@@ -25,7 +25,7 @@ export class ArticlesComponent implements OnInit, OnDestroy {
       .getArticles()
       .subscribe((data: any) => {
         this.articles = data.results;
-        this.filteredArticles = this.articles; // Initially show all articles
+        this.filteredArticles = this.articles; //
       });
   }
 
@@ -53,7 +53,7 @@ export class ArticlesComponent implements OnInit, OnDestroy {
       return titleMatches || summaryMatches;
     });
 
-    // Sorting: articles with title matches first
+    //
     this.filteredArticles.sort((a, b) => {
       const aTitleMatches = keywords.some((keyword) =>
         a.title.toLowerCase().includes(keyword)
