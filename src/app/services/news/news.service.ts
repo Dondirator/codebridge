@@ -10,7 +10,7 @@ export class NewsService {
 
   constructor(private http: HttpClient) {}
 
-  getArticles(limit: number = 120): Observable<any> {
+  getArticles(limit: number = 20): Observable<any> {
     let params = new HttpParams().set('limit', limit.toString());
 
     return this.http.get<any>(this.apiUrl, { params: params });
